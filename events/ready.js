@@ -87,11 +87,11 @@ module.exports = async (bot) => {
         sendTheArticleInAllChannels(); //remember: put a client.close() here
     }, interval);
 
-    // setInterval(async function () {
-    //     bot.user.setActivity('$help');
-    //     setTimeout(() => {
-    //         bot.user.setActivity('📺 New Netflix #Inspiration4 episode ! 🚀 GO WATCH NOW 🚀');
-    //     }, 6000);
-    // }, 12000);
+    setInterval(async function () {
+        bot.user.setActivity('$help');
+        setTimeout(() => {
+            bot.user.setActivity('🛰️ Go #JamesWebb, congrats @ArianeSpace 🚀');
+        }, 6000);
+    }, 12000);
 
 }
