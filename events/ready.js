@@ -90,7 +90,7 @@ module.exports = async (bot) => {
     setInterval(async function () {
         bot.user.setActivity('$help');
         setTimeout(() => {
-            bot.user.setActivity('🛰️ Go #JamesWebb, congrats @ArianeSpace 🚀');
+            bot.user.setActivity('👉 https://roadtomars.page | Go check out this project 🚀');
         }, 6000);
     }, 12000);
 
