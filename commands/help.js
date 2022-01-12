@@ -8,7 +8,7 @@ module.exports = (message) => {
     if (isAdmin) {
         const adminHelpEmbed = new Discord.MessageEmbed()
             .setColor('#5E6BDB')
-            .setAuthor({name: '🔗 HELP (admin)'})
+            .setTitle('🔗 HELP (admin)')
             .addField('👩‍🚀   $astronauts', '```astronauts in space right now```', false)
             .addField('🚀   $launches', '```Upcoming space flight```', false)
             .addField('🛰️   $iss', '```Check ISS stats and location```', false)
@@ -22,7 +22,7 @@ module.exports = (message) => {
     } else {
         const userHelpEmbed = new Discord.MessageEmbed()
             .setColor('#5E6BDB')
-            .setAuthor({name: '🔗 HELP'})
+            .setTitle('🔗 HELP')
             .addField('👩‍🚀   $astronauts', '```astronauts in space right now```', false)
             .addField('🚀   $launches', '```Upcoming space flight```', false)
             .addField('🛰️   $iss', '```Check ISS stats and location```', false)
