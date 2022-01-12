@@ -14,7 +14,7 @@ module.exports = (message) => {
             .setTitle(data.title)
             .setImage(data.hdurl)
             .setDescription(data.explanation)
-            .setFooter(`@${data.copyright} ` + `| APOD: ${data.date}`);
+            .setFooter({text: `@${data.copyright} ` + `| APOD: ${data.date}`});
 
         if (data.media_type === 'video') message.channel.send(data.url);
 
