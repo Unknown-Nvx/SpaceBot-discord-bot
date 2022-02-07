@@ -71,22 +71,21 @@ module.exports = async (bot) => {
                 .setDescription(newarticle.summary)
                 .setTimestamp();
 
-            guildsIds.forEach(e => {
+            guildsIds.forEach(async e => {
                 const guildid = e.guildid;
                 const channelid = e.channelid;
-                const fetchedChannel = bot.channels.cache.get(channelid);
-                
+                const fetchedChannel = await bot.channels.cache.get(channelid);
+
                 fetchedChannel.send({ embeds: [embed] });
             });
         }
     }
-
+    
+    
     const interval = 30 * 1000;
     setInterval(() => {
         console.log('⏲️ every 5 minutes task loaded'); // Check every five minutes if there is an new article, and if it does, send it.
-        const toto = bot.channels.cache.get('874302736806580265');
-        toto.send("toto");
-        //sendTheArticleInAllChannels();
+        sendTheArticleInAllChannels();
     }, interval);
 
     setInterval(async function () {
