@@ -76,7 +76,8 @@ module.exports = async (bot) => {
                 const channelid = e.channelid;
                 const fetchedChannel = bot.channels.cache.get(channelid);
 
-                fetchedChannel.send({ embeds: [embed] });
+                console.log(channelid)
+                //fetchedChannel.send({ embeds: [embed] });
             });
         }
     }
@@ -84,8 +85,7 @@ module.exports = async (bot) => {
     const interval = 30 * 1000;
     setInterval(() => {
         console.log('⏲️ every 5 minutes task loaded'); // Check every five minutes if there is an new article, and if it does, send it.
-        console.log(bot.channels.cache.get('868932081093316688'))
-        //sendTheArticleInAllChannels();
+        sendTheArticleInAllChannels();
     }, interval);
 
     setInterval(async function () {
