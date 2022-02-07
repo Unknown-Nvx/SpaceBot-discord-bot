@@ -81,10 +81,11 @@ module.exports = async (bot) => {
         }
     }
 
-    const interval = 300 * 1000;
+    const interval = 30 * 1000;
     setInterval(() => {
         console.log('⏲️ every 5 minutes task loaded'); // Check every five minutes if there is an new article, and if it does, send it.
-        sendTheArticleInAllChannels();
+        console.log(bot.channels.cache.get('868932081093316688'))
+        //sendTheArticleInAllChannels();
     }, interval);
 
     setInterval(async function () {
