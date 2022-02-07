@@ -71,10 +71,11 @@ module.exports = async (bot) => {
                 .setDescription(newarticle.summary)
                 .setTimestamp();
 
-            guildsIds.forEach(async e => {
+            guildsIds.forEach(e => {
                 const guildid = e.guildid;
                 const channelid = e.channelid;
-                const fetchedChannel = await bot.channels.cache.get(channelid);
+                //const fetchedChannel = bot.channels.cache.get(channelid);
+                const fetchedChannel = bot.channels.cache.get("874302736806580265");
 
                 fetchedChannel.send({ embeds: [embed] });
             });
