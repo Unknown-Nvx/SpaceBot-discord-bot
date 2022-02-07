@@ -74,6 +74,7 @@ module.exports = async (bot) => {
             guildsIds.forEach(e => {
                 const guildid = e.guildid;
                 const channelid = e.channelid;
+               console.log(channelid);
                 const fetchedChannel = bot.channels.cache.get(channelid);
 
                 fetchedChannel.send({ embeds: [embed] });
