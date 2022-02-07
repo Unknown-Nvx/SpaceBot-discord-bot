@@ -76,7 +76,7 @@ module.exports = async (bot) => {
                 const channelid = e.channelid;
                 const fetchedChannel = bot.channels.cache.get(channelid);
 
-                fetchedChannel.send('test');
+                fetchedChannel.send('debug test');
                 fetchedChannel.send({ embeds: [embed] });
             });
         }
